@@ -1,263 +1,371 @@
 [
     {
-        "title": "Beef Stroganoff",
+        "title": "Graham Cracker Cake",
+        "category": "Cakes & Desserts",
         "ingredients": [
-            "1 lb. beef (strips or cubes)",
-            "1 can Cream of Mushroom soup",
-            "1/2 cup sour cream",
-            "1 small can sliced mushrooms",
-            "Egg noodles"
+            "2 c. Sugar",
+            "2 Sticks Butter",
+            "5 eggs",
+            "1 lb box graham crackers crushed",
+            "2/3 c. milk",
+            "1 c nuts",
+            "2 t. bake powd.",
+            "1 t. vanilla"
         ],
-        "recipe": "Brown the beef in a skillet. Stir in the mushroom soup and drained mushrooms. Simmer on low heat for 10–15 minutes until meat is tender. Just before serving, stir in the sour cream. Serve over hot cooked egg noodles."
+        "recipe": "Mix together in bowl! Mix with other ingredients. Bake 1 hr. 30 min at 350° in Tube pan.",
+        "garden_tags": []
     },
     {
-        "title": "Classic Potato Salad",
+        "title": "Icing (For Graham Cracker Cake or Mud Cake)",
+        "category": "Cakes & Desserts",
         "ingredients": [
-            "4-5 large potatoes (boiled/peeled/cubed)",
-            "3 hard-boiled eggs (chopped)",
-            "1/2 cup mayo",
-            "1 tbsp mustard",
-            "1/4 cup diced celery",
-            "Salt & pepper"
+            "1 box conf. sugar",
+            "6 T. milk",
+            "1/3 c. cocoa",
+            "Small marshmallows (Bag 10½ oz)"
         ],
-        "recipe": "Mix mayo, mustard, salt, and pepper in a large bowl. Fold in the potatoes, eggs, and celery. Chill for at least 2 hours before serving."
+        "recipe": "Add small marshmallows when you take cake out of oven & then spread icing.",
+        "garden_tags": []
     },
     {
-        "title": "Oven-Baked Chicken",
+        "title": "Coconut Crispys",
+        "category": "Cookies & Bars",
         "ingredients": [
-            "Chicken pieces (thighs/legs)",
-            "1 cup breadcrumbs",
-            "1/2 cup grated Parmesan",
-            "1 tsp garlic powder",
-            "Melted butter"
+            "1/2 marg",
+            "1/2 Sug",
+            "1/2 Brown Sug",
+            "1 egg",
+            "1/2 t vanilla",
+            "1 c. Flour",
+            "1/2 ea of Soda & Salt",
+            "1/2 c crushed Corn Flake (2 cups regular)",
+            "1/2 coconut"
         ],
-        "recipe": "Dip chicken in melted butter, then coat in the breadcrumb/cheese mixture. Bake at 375°F for 45–50 minutes until golden and juices run clear."
+        "recipe": "350° 10 min. (Double except Flour).",
+        "garden_tags": []
     },
     {
-        "title": "A-1 Meatloaf",
+        "title": "Chocolate Chip Cookies",
+        "category": "Cookies & Bars",
         "ingredients": [
-            "1 ½ lbs ground beef",
-            "¾ cup cracker crumbs",
-            "1 egg (beaten)",
-            "½ cup milk",
-            "2 tbsp A-1 sauce",
-            "1 tsp salt",
-            "¼ tsp pepper"
-        ],
-        "recipe": "Combine all ingredients in a large bowl. Shape into a loaf in a shallow baking pan. Bake at 350°F for 1 hour. Let stand 10 minutes before slicing."
-    },
-    {
-        "title": "Tuna Noodle Casserole",
-        "ingredients": [
-            "1 can tuna (drained)",
-            "1 can Cream of Celery soup",
-            "½ cup milk",
-            "2 cups cooked egg noodles",
-            "1 cup frozen peas (optional)",
-            "Crushed potato chips for topping"
-        ],
-        "recipe": "Combine tuna, soup, milk, noodles, and peas. Pour into a greased casserole dish. Top with crushed potato chips. Bake at 375°F for 20–25 minutes until bubbly."
-    },
-    {
-        "title": "Chili Con Carne",
-        "ingredients": [
-            "1 lb ground beef",
-            "1 medium onion (chopped)",
-            "1 can (15 oz) kidney beans",
-            "1 can (15 oz) tomato sauce",
-            "1-2 tbsp chili powder",
-            "Salt to taste"
-        ],
-        "recipe": "Brown beef and onion; drain fat. Add beans, tomato sauce, and spices. Cover and simmer for 30 minutes to blend flavors."
-    },
-    {
-        "title": "Snickerdoodles",
-        "ingredients": [
-            "1 cup shortening (or butter)",
-            "1 ½ cups sugar",
+            "1 c. Margarine",
+            "1 c. Packed Brown Sugar",
+            "1/2 c. Sugar",
+            "1 t. vanilla",
             "2 eggs",
-            "2 ¾ cups flour",
-            "2 tsp cream of tartar",
-            "1 tsp baking soda",
-            "½ tsp salt",
-            "Topping: 2 tbsp sugar + 2 tsp cinnamon"
+            "2¼ c. Flour",
+            "1 t. baking soda",
+            "1/2 pkg. chocolate chips",
+            "1/2 to 1 c. chopped nuts"
         ],
-        "recipe": "Cream shortening and sugar. Add eggs. Mix in dry ingredients. Roll into 1-inch balls. Roll balls in cinnamon-sugar mixture. Bake on ungreased sheet at 400°F for 8–10 minutes."
+        "recipe": "Preheat oven to 375°. Cream in mixer: Margarine, Brown Sugar, Sugar, vanilla. Beat and add: 2 eggs. Then add gradually: Flour, baking soda. When finished mixing add: chocolate chips, chopped nuts. Drop batter by teaspoonfull on cookie sheet. Bake at 375° for 8–10 min. Yield: 7–8 dozen.",
+        "garden_tags": []
     },
     {
-        "title": "Baked Beans",
+        "title": "Mississippi Mud Cake",
+        "category": "Cakes & Desserts",
         "ingredients": [
-            "2 cans (16 oz) pork and beans",
-            "¼ cup brown sugar",
-            "1 tsp mustard",
-            "2 tbsp ketchup",
-            "2-3 slices bacon (cut up)"
+            "2 cups Sugar",
+            "2 Sticks Margarine",
+            "1½ c. flour",
+            "1/2 c cocoa",
+            "4 eggs",
+            "1½ c. nuts"
         ],
-        "recipe": "Mix beans, sugar, mustard, and ketchup in a baking dish. Top with bacon pieces. Bake at 325°F for 1 hour until thickened."
+        "recipe": "Mix. Grease & flour 13x9x2\" pan. Bake at 350° for 20 min.",
+        "garden_tags": []
     },
     {
-        "title": "Classic Macaroni and Cheese",
+        "title": "Yummy Bars",
+        "category": "Cookies & Bars",
         "ingredients": [
-            "8 oz macaroni (cooked/drained)",
-            "2 cups shredded cheddar cheese",
-            "2 tbsp butter",
-            "2 tbsp flour",
-            "2 cups milk",
-            "1/2 tsp salt",
-            "1/4 tsp pepper"
+            "1 Pkg. German Choc. cake mix",
+            "3/4 c. melted Margarine",
+            "1/3 c. evaporated milk",
+            "6 oz choc chips",
+            "1 c. nuts",
+            "1 pkg. caramels",
+            "1/3 c. evaporated milk (for caramel)"
         ],
-        "recipe": "Melt butter in a pan, stir in flour, salt, and pepper. Gradually add milk, stirring until thickened. Add 1.5 cups of cheese until melted. Mix with macaroni. Pour into dish, top with remaining cheese. Bake at 350°F for 20 minutes."
+        "recipe": "Mix together — Put half of mixture in 9x13 Pan. Bake 6 minutes at 350°. Remove from oven. Sprinkle 6 oz of choc chips and 1 c. nuts over layer. Melt pkg. of caramels in 1/3 c. evaporated milk. Pour over cake in pan. Add other 1/2 of cake mixture on top of caramel nut layer. Bake 15–20 minutes at 350°.\n\n\"When you spread the table, contentions will cease.\" — Israeli Proverb",
+        "garden_tags": []
     },
     {
-        "title": "Slow Cooker Pot Roast",
+        "title": "Lemon Freeze Pie",
+        "category": "Cakes & Desserts",
         "ingredients": [
-            "3-4 lb chuck roast",
-            "1 packet onion soup mix",
-            "1 cup water",
-            "4 carrots (chopped)",
-            "4 potatoes (cubed)",
-            "1 onion (sliced)"
+            "1 lg. Cool Whip (Thawed)",
+            "1 lg. lemonade concentrate (Thawed)",
+            "1 Eagle Brand milk",
+            "Graham cracker crust"
         ],
-        "recipe": "Place vegetables in slow cooker. Top with roast. Combine soup mix and water; pour over meat. Cover and cook on Low for 8-10 hours or High for 5-6 hours."
+        "recipe": "Mix altogether & put in graham crust. Freeze. Easy — Fast — Good.",
+        "garden_tags": [
+            "lemons"
+        ]
     },
     {
-        "title": "Old Fashioned Pancakes",
+        "title": "Potato Cheese & Broccoli Soup",
+        "category": "Soups & Stews",
         "ingredients": [
-            "1 1/2 cups flour",
-            "3 1/2 tsp baking powder",
-            "1 tsp salt",
-            "1 tbsp sugar",
-            "1 1/4 cups milk",
+            "1/2 onion, diced",
+            "2 T. of Butter",
+            "Pepper to taste",
+            "5 med. Potatoes, diced",
+            "3 cups Chicken Broth",
+            "Scant cup very finely diced Broccoli",
+            "4½ cups milk",
+            "Velveeta, about 2½ inch chunk",
+            "1 pkg Cream cheese (add in small chunks)",
+            "Extra Broccoli in small pieces",
+            "1/2 Pkg. Cream Cheese (4 oz) OR 2 bottles Kraft Bacon Cheese Spread"
+        ],
+        "recipe": "Sauté on Medium Heat: onion, butter, pepper. Add & Simmer 15 min: Potatoes, Chicken Broth, finely diced broccoli. Then add: milk, Velveeta, Cream cheese, Broccoli. Simmer. Watch or it will Burn on Bottom.",
+        "garden_tags": [
+            "onions",
+            "potatoes",
+            "broccoli"
+        ]
+    },
+    {
+        "title": "Pineapple Delight",
+        "category": "Cakes & Desserts",
+        "ingredients": [
+            "1 pkg Yellow Cake mix",
+            "1 large can crushed Pineapple",
+            "1 cube Butter"
+        ],
+        "recipe": "Butter an 8x12 Pyrex Baking dish. Bake at 350°. Time to prepare — 30 min.\n\nFrom the recipe file of Eloise Parrish.",
+        "garden_tags": []
+    },
+    {
+        "title": "Meat Balls",
+        "category": "Mains",
+        "ingredients": [
+            "1/3 c. Oats",
             "1 egg",
-            "3 tbsp melted butter"
+            "1/4 c. milk",
+            "1 lb. Hamburger",
+            "2 T. Ketchup",
+            "Salt, Pepper, Garlic",
+            "1 Med onion diced",
+            "Worcestershire Sauce",
+            "1 can Cream of Chicken soup",
+            "1/2 can water"
         ],
-        "recipe": "Sift dry ingredients together. Make a well and add milk, egg, and butter. Mix until smooth. Pour onto a hot griddle and cook until golden on both sides."
+        "recipe": "These are all approx. Mix all ingredients except Hamburger well. Then add Hamburger. Form into Balls. Brown in iron skillet on all sides — be careful not to burn! Mix can of Cream of Chicken and 1/2 can water, add to balls and cover for about 1/2 hour on med low.",
+        "garden_tags": [
+            "onions",
+            "garlic"
+        ]
     },
     {
-        "title": "Peanut Butter Cookies",
+        "title": "Vegetable Bean Soup with Piston",
+        "category": "Soups & Stews",
         "ingredients": [
-            "1 cup peanut butter",
-            "1 cup sugar",
-            "1 egg",
-            "1 tsp vanilla extract"
+            "1 cup beans (3/4 c dry white + 1/4 c Fava Beans)",
+            "4 c. water",
+            "2 T. Light Olive Oil",
+            "1/2 c. diced white onions",
+            "2 Garlic Cloves, Minced",
+            "1/4 t. Curry powder",
+            "1 c. Fresh Tomatoes — Peeled, Seeded, Diced",
+            "3/4 c. Carrots — Peeled & Diced",
+            "3/4 c. Green Beans — Cut in 1/2\" sections",
+            "1½ c. Zucchini — Diced",
+            "1 Green Pepper",
+            "1½ c. Boiling Potatoes — Peeled & Diced",
+            "1/2 c. Vermicelli Noodles",
+            "Salt & Pepper",
+            "1/2 c. Freshly grated Parmesan, Romano, Asiago, or Swiss",
+            "Piston: 3 large cloves garlic",
+            "Piston: 1/3 c. fresh Basil or 2 T. dried",
+            "Piston: 3 T. fresh Thyme or 2 T. dried",
+            "Piston: 4 T. grated Parmesan Cheese",
+            "Piston: 1 Italian plum tomato, chopped fine",
+            "Piston: 4 T. olive oil",
+            "Piston: 1/4 t. salt"
         ],
-        "recipe": "Mix all ingredients until smooth. Roll into 1-inch balls. Place on baking sheet and flatten with a fork in a crisscross pattern. Bake at 350°F for 10-12 minutes."
+        "recipe": "(1) Soak beans overnight. Simmer until tender. Drain and save bean stock. (2) In large sauce pan heat oil. Add onions and garlic. Sauté 2 min. Add curry powder, sauté until onions are tender. (3) Add Tomatoes — Cook 2 min. (4) Add water to bean stock to make 8 cups. Add this to the onions and garlic mixture. Add carrots and Potatoes — Simmer Till Tender. (5) Add green beans, zucchini, pepper and noodles. Simmer Till Tender. (6) Add the beans and heat. If too thick add a little boiling water. (7) Add the Piston just before serving. (8) Pass the grated cheese.\n\nPiston: Mash spices into paste. Add tomato, cheese and salt. Beat in olive oil 1 T. at a time. When ready to serve, add some soup to thin the mixture.",
+        "garden_tags": [
+            "onions",
+            "garlic",
+            "tomatoes",
+            "carrots",
+            "green beans",
+            "zucchini",
+            "potatoes",
+            "basil",
+            "thyme"
+        ]
     },
     {
-        "title": "Banana Bread",
+        "title": "Chili",
+        "category": "Soups & Stews",
         "ingredients": [
-            "3 ripe bananas (mashed)",
-            "1/3 cup melted butter",
-            "3/4 cup sugar",
-            "1 egg (beaten)",
-            "1 tsp vanilla",
-            "1 tsp baking soda",
-            "Pinch of salt",
-            "1 1/2 cups flour"
+            "1 small onion",
+            "1/2 pepper",
+            "1 lb. lean ground round",
+            "1/2 can peeled tomatoes",
+            "1 can kidney beans",
+            "Salt & pepper to taste",
+            "Small pinch oregano",
+            "Larger pinch basil",
+            "1 small bay leaf",
+            "1 T. chili powder",
+            "Paprika"
         ],
-        "recipe": "Mix butter into mashed bananas. Add sugar, egg, vanilla, salt, and soda. Mix in flour. Pour into greased loaf pan. Bake at 350°F for 1 hour."
+        "recipe": "Chop small onion & 1/2 pepper — sauté until limp, about 5 mins. Brown 1 lb. lean ground round. Lower heat to simmer. Add 1/2 can peeled tomatoes broken up small. Add 1 can kidney beans, salt & pepper to taste, small pinch oregano & larger pinch basil, 1 small bay leaf broken up well & 1 T. chili powder. Sprinkle well with paprika. Turn heat up a bit & simmer 1/2 to 1 hr.\n\n— Minda Bregerson",
+        "garden_tags": [
+            "onions",
+            "tomatoes",
+            "basil",
+            "oregano"
+        ]
     },
     {
-        "title": "Porcupine Meatballs",
+        "title": "\"TuTu\" Ranch Dressing",
+        "category": "Sauces & Dressings",
         "ingredients": [
-            "1 lb ground beef",
-            "1/2 cup uncooked long-grain rice",
-            "1/2 cup water",
-            "1/3 cup chopped onion",
-            "1 tsp salt",
-            "1/2 tsp celery salt",
-            "1/8 tsp garlic powder",
-            "1/8 tsp pepper",
-            "1 can (15 oz) tomato sauce",
-            "1 cup water",
-            "2 tsp Worcestershire sauce"
+            "3/4 c Mayonnaise — Organic Best",
+            "1/2 c. Buttermilk",
+            "2 T. Flat (Italian) Parsley",
+            "2 T. Celery Leaves",
+            "1 T. Red Onion",
+            "1 T. Lemon Juice — Fresh"
         ],
-        "recipe": "Mix beef, rice, 1/2 cup water, onion, and seasonings. Shape into 1 1/2-inch balls. In a large skillet, mix tomato sauce, 1 cup water, and Worcestershire sauce. Bring to a boil. Add meatballs. Cover and simmer for 45 minutes until rice is tender."
+        "recipe": "Mix ingredients together.",
+        "garden_tags": [
+            "lemons",
+            "onions",
+            "parsley"
+        ]
     },
     {
-        "title": "Stuffed Peppers",
+        "title": "Aunt Ceil's Egg Nog",
+        "category": "Drinks & Punches",
         "ingredients": [
-            "6 green peppers",
-            "1 lb ground beef",
-            "1/4 cup chopped onion",
-            "Salt & pepper",
-            "1 can (15 oz) tomato sauce",
-            "2 cups cooked rice"
+            "Eggs (1 per person)",
+            "Sugar",
+            "Milk",
+            "Sweet cream",
+            "A little sticky"
         ],
-        "recipe": "Cut tops off peppers and remove seeds. Cook peppers in boiling water for 5 mins; drain. Brown beef and onion. Add rice, salt, pepper, and half the tomato sauce. Stuff peppers. Stand peppers in a baking dish. Pour remaining sauce over them. Bake at 350°F for 45 minutes."
+        "recipe": "Beat eggs along with sugar — allow 1 egg per person. Pour in milk, stir. Fold in sweet cream — have to judge about how much you need. Put a little sticky in to cook eggs. Drink hot or cold.",
+        "garden_tags": []
     },
     {
-        "title": "Swedish Meatballs",
+        "title": "Mexican Bean Dip",
+        "category": "Appetizers & Snacks",
         "ingredients": [
-            "1 lb ground beef",
-            "1/2 cup breadcrumbs",
-            "1 egg",
-            "1/4 cup milk",
-            "1/4 cup chopped onion",
-            "1/2 tsp allspice",
-            "1/4 tsp nutmeg",
-            "1 can beef gravy"
+            "1 — 3 oz. jar Picante sauce",
+            "1 — 16 oz. can refried beans",
+            "1 c. grated cheese"
         ],
-        "recipe": "Combine all ingredients except gravy. Shape into small balls and brown in a skillet. Drain fat. Pour beef gravy over meatballs. Cover and simmer for 15-20 minutes. Serve over noodles or mashed potatoes."
+        "recipe": "(1) Heat beans & picante sauce until they bubble. (2) Add cheese & heat until it begins to melt. Serve with tortilla chips.",
+        "garden_tags": []
     },
     {
-        "title": "Cornbread",
+        "title": "Home Style Dressing Mix",
+        "category": "Sauces & Dressings",
         "ingredients": [
-            "1 cup flour",
-            "1 cup cornmeal",
-            "1/4 cup sugar",
-            "4 tsp baking powder",
-            "1/2 tsp salt",
-            "1 cup milk",
-            "1 egg",
-            "1/4 cup melted shortening or oil"
+            "2 t. minced onion",
+            "1/2 t. salt",
+            "1/2 t. garlic powd.",
+            "1 T. Parsley Flakes",
+            "1 c. Buttermilk",
+            "1 c. Mayonnaise (or sub Sour Cream for Buttermilk)"
         ],
-        "recipe": "Combine dry ingredients. Stir in milk, egg, and shortening. Beat until smooth. Pour into greased 8x8 pan. Bake at 425°F for 20-25 minutes."
+        "recipe": "Make up Ahead of Time — Keeps for 6 months. Mix dry ingredients. When ready to use, combine with 1 c. Buttermilk and 1 c. Mayonnaise. Or substitute Sour Cream for Buttermilk for a thicker dressing.",
+        "garden_tags": [
+            "onions",
+            "garlic",
+            "parsley"
+        ]
     },
     {
-        "title": "American Goulash",
+        "title": "Punch",
+        "category": "Drinks & Punches",
         "ingredients": [
-            "1 lb ground beef",
-            "1 onion (chopped)",
-            "2 cans (15 oz) tomato sauce",
-            "2 cups elbow macaroni (uncooked)",
-            "1 tsp garlic salt",
-            "1 tbsp Italian seasoning"
+            "1 Gal. cranberry juice",
+            "1 — 12 oz. limeade, Frozen",
+            "1 — 12 oz Pink lemonade, Frozen",
+            "3 qts. 7-Up"
         ],
-        "recipe": "Brown beef and onion. Stir in tomato sauce and seasonings. Add 2 cups water and the dry macaroni. Bring to a boil, then reduce heat and simmer covered for 20 minutes until macaroni is tender."
+        "recipe": "Thaw frozen concentrates. Combine all ingredients and stir gently. Serve chilled.",
+        "garden_tags": [
+            "lemons"
+        ]
     },
     {
-        "title": "Baked Ziti",
+        "title": "Tootsie Rolls",
+        "category": "Cookies & Bars",
         "ingredients": [
-            "1 lb ziti pasta",
-            "1 jar marinara sauce",
-            "1 lb ricotta cheese",
-            "1 lb shredded mozzarella",
-            "1/4 cup grated Parmesan"
+            "1 cup honey",
+            "1 cup powdered milk",
+            "1/2 cup cocoa powder",
+            "1 tsp vanilla"
         ],
-        "recipe": "Cook ziti and drain. Mix pasta with sauce and ricotta. Layer half in a baking dish, top with half the mozzarella. Add remaining pasta and remaining cheeses. Bake at 375°F for 30 minutes until bubbly."
+        "recipe": "Cook honey to hard ball stage (255°F). Remove from heat. Stir in cocoa + vanilla thoroughly. Add powdered milk. Blend well. Cool enough to handle & form into a roll the size of a pencil. Cut into 2\" pieces & wrap.",
+        "garden_tags": []
     },
     {
-        "title": "Shepherd's Pie",
+        "title": "Richard Simmons Sugarless Berry Jam",
+        "category": "Sauces & Dressings",
         "ingredients": [
-            "1 lb ground beef",
-            "1 onion (chopped)",
-            "1 can (15 oz) mixed vegetables (drained)",
-            "1 can beef gravy",
-            "3 cups mashed potatoes"
+            "1 quart fresh berries",
+            "3 packets unflavored gelatin (or 3 Tablespoons)",
+            "1 Tablespoon honey",
+            "2 cups white grape juice or apple juice"
         ],
-        "recipe": "Brown beef and onion. Stir in vegetables and gravy. Pour into a casserole dish. Spread mashed potatoes over the top. Bake at 400°F for 20 minutes until potatoes are golden."
+        "recipe": "Sprinkle all gelatin over about 1/2 cup fruit juice. Let gelatin soften 3 minutes. Puree berries in blender. In saucepan combine pureed fruit + softened gelatin & all remaining ingredients. Bring to a slow & steady boil. Skim foam.",
+        "garden_tags": [
+            "berries"
+        ]
     },
     {
-        "title": "Apple Crisp",
+        "title": "Trisha's Blue Cheese Salad Dressing",
+        "category": "Sauces & Dressings",
         "ingredients": [
-            "4-6 cups sliced apples",
-            "1 cup brown sugar",
-            "3/4 cup oats",
-            "3/4 cup flour",
-            "1 tsp cinnamon",
-            "1/2 cup softened butter"
+            "4 oz Blue Cheese",
+            "8 oz Plain Yogurt",
+            "4 oz Cream Cheese",
+            "1/4 c Mayonnaise",
+            "1/4 t. Onion Powder",
+            "1/8 t. Garlic Powder",
+            "1½ t. Honey",
+            "Dash Sea Salt & Pepper to taste",
+            "Milk (for desired thickness)"
         ],
-        "recipe": "Place apples in a greased baking dish. Mix remaining ingredients until crumbly and sprinkle over apples. Bake at 375°F for 30-35 minutes until apples are tender."
+        "recipe": "Add all ingredients in blender. Add milk for desired thickness.",
+        "garden_tags": [
+            "onions",
+            "garlic"
+        ]
+    },
+    {
+        "title": "Fresh Fruit Tart with Lemon Almond Pastry Cream",
+        "category": "Cakes & Desserts",
+        "ingredients": [
+            "Crust: 2 c. Flour",
+            "Crust: 1/2 c. Powdered Sugar",
+            "Crust: 1 t. Almond Extract",
+            "Crust: Pinch Salt",
+            "Crust: 1 c + 1 T Butter",
+            "Crust: 4 oz Bittersweet chocolate (optional)",
+            "Pastry Cream: 3 c. Half & Half",
+            "Pastry Cream: 1 t. Almond Extract",
+            "Pastry Cream: Zest of 1 Lemon",
+            "Pastry Cream: 3/4 c Sugar",
+            "Pastry Cream: 8 egg yolks",
+            "Pastry Cream: 3 T Cornstarch",
+            "Pastry Cream: Juice of 1 lemon",
+            "Pastry Cream: 4–6 c. Berries for topping"
+        ],
+        "recipe": "Crust: Blend in Mixer. Bake at 375° for 20–25 min in an oiled fluted tart pan.\n\nPastry Cream: Temper the eggs with the cream! Combine half & half, almond extract, lemon zest and sugar in a saucepan over medium heat. Whisk egg yolks with cornstarch separately. Slowly pour warm cream into egg mixture to temper, then return all to pan and cook until thickened. Stir in lemon juice. Cool completely before filling tart shell. Top with fresh berries.",
+        "garden_tags": [
+            "lemons",
+            "berries"
+        ]
     }
 ]
