@@ -1,0 +1,869 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Her Recipe Box</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Lora:ital,wght@0,400;0,500;1,400&family=IM+Fell+English+SC&display=swap"
+        rel="stylesheet" />
+    <style>
+        :root {
+            --parchment: #fdf6ec;
+            --parchment-dark: #f5e9d4;
+            --parchment-deep: #ede0c4;
+            --rust: #8b3a1a;
+            --rust-light: #a84a22;
+            --amber: #c8842a;
+            --amber-light: #e0a040;
+            --walnut: #3b2a1a;
+            --walnut-light: #5c4030;
+            --cream: #fff8f0;
+            --gold: #b8860b;
+            --gold-light: #d4a017;
+            --shadow: rgba(59, 42, 26, 0.18);
+            --shadow-deep: rgba(59, 42, 26, 0.35);
+        }
+
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: var(--parchment);
+            background-image:
+                url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='400' height='400' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            color: var(--walnut);
+            font-family: 'Lora', Georgia, serif;
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        /* ── HEADER ─────────────────────────────────────── */
+        header {
+            background: var(--rust);
+            background-image: linear-gradient(160deg, #7a2e10 0%, #8b3a1a 40%, #9e4520 100%);
+            color: var(--parchment);
+            text-align: center;
+            padding: 3rem 1.5rem 2.5rem;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 4px solid var(--amber);
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23noise)' opacity='0.07'/%3E%3C/svg%3E");
+            pointer-events: none;
+        }
+
+        .header-ornament {
+            display: block;
+            margin: 0 auto 0.75rem;
+            opacity: 0.85;
+            animation: fadeDown 0.8s ease both;
+        }
+
+        .site-title {
+            font-family: 'Playfair Display', Georgia, serif;
+            font-size: clamp(2.2rem, 6vw, 3.8rem);
+            font-weight: 700;
+            letter-spacing: 0.04em;
+            line-height: 1.1;
+            color: var(--parchment);
+            text-shadow: 0 2px 12px rgba(0, 0, 0, 0.4);
+            animation: fadeDown 0.8s 0.1s ease both;
+        }
+
+        .site-subtitle {
+            font-family: 'IM Fell English SC', serif;
+            font-size: clamp(0.75rem, 2vw, 0.95rem);
+            letter-spacing: 0.22em;
+            color: var(--amber-light);
+            margin-top: 0.6rem;
+            animation: fadeDown 0.8s 0.2s ease both;
+        }
+
+        .header-divider {
+            display: block;
+            margin: 1.2rem auto 0;
+            opacity: 0.6;
+            animation: fadeDown 0.8s 0.3s ease both;
+        }
+
+        /* ── STICKY CONTROLS ────────────────────────────── */
+        .controls {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            background: var(--parchment-dark);
+            border-bottom: 2px solid var(--parchment-deep);
+            padding: 0.9rem 1.2rem;
+            box-shadow: 0 2px 12px var(--shadow);
+        }
+
+        .search-wrap {
+            position: relative;
+            max-width: 520px;
+            margin: 0 auto 0.75rem;
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 0.9rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--amber);
+            font-size: 1rem;
+            pointer-events: none;
+        }
+
+        #search {
+            width: 100%;
+            padding: 0.6rem 1rem 0.6rem 2.4rem;
+            border: 1.5px solid var(--amber);
+            border-radius: 2px;
+            background: var(--cream);
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            color: var(--walnut);
+            outline: none;
+            transition: box-shadow 0.2s, border-color 0.2s;
+        }
+
+        #search:focus {
+            border-color: var(--rust);
+            box-shadow: 0 0 0 3px rgba(139, 58, 26, 0.15);
+        }
+
+        #search::placeholder {
+            color: var(--walnut-light);
+            opacity: 0.6;
+            font-style: italic;
+        }
+
+        .filters {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.4rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.75rem;
+            letter-spacing: 0.06em;
+            padding: 0.3rem 0.85rem;
+            border: 1.5px solid var(--amber);
+            border-radius: 1px;
+            background: transparent;
+            color: var(--walnut-light);
+            cursor: pointer;
+            transition: background 0.18s, color 0.18s, border-color 0.18s, transform 0.12s;
+        }
+
+        .filter-btn:hover {
+            background: var(--parchment-deep);
+            transform: translateY(-1px);
+        }
+
+        .filter-btn.active {
+            background: var(--rust);
+            color: var(--parchment);
+            border-color: var(--rust);
+        }
+
+        /* ── RECIPE GRID ────────────────────────────────── */
+        .grid-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 2rem 1.2rem 4rem;
+        }
+
+        .section-heading {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.25em;
+            color: var(--amber);
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+
+        .recipe-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+            gap: 1.4rem;
+        }
+
+        /* ── RECIPE CARD ─────────────────────────────────── */
+        .recipe-card {
+            background: var(--cream);
+            border: 1px solid var(--parchment-deep);
+            border-top: 3px solid var(--amber);
+            padding: 1.4rem 1.3rem 1.1rem;
+            cursor: pointer;
+            position: relative;
+            transition: transform 0.22s ease, box-shadow 0.22s ease;
+            box-shadow: 2px 3px 10px var(--shadow);
+            animation: cardIn 0.4s ease both;
+        }
+
+        .recipe-card:hover {
+            transform: translateY(-4px) rotate(0.3deg);
+            box-shadow: 4px 8px 22px var(--shadow-deep);
+            border-top-color: var(--rust);
+        }
+
+        .card-category {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.65rem;
+            letter-spacing: 0.18em;
+            color: var(--amber);
+            text-transform: uppercase;
+            margin-bottom: 0.4rem;
+        }
+
+        .card-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.15rem;
+            font-weight: 600;
+            color: var(--rust);
+            line-height: 1.3;
+            margin-bottom: 0.6rem;
+        }
+
+        .card-preview {
+            font-size: 0.82rem;
+            color: var(--walnut-light);
+            font-style: italic;
+            line-height: 1.5;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 1rem;
+            padding-top: 0.7rem;
+            border-top: 1px dashed var(--parchment-deep);
+        }
+
+        .card-ingredient-count {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.08em;
+            color: var(--walnut-light);
+        }
+
+        .fav-btn {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.3rem;
+            line-height: 1;
+            transition: transform 0.15s ease;
+            color: var(--parchment-deep);
+            padding: 0;
+        }
+
+        .fav-btn.active {
+            color: var(--rust);
+        }
+
+        .fav-btn:hover {
+            transform: scale(1.25);
+        }
+
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: 3rem 1rem;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            color: var(--walnut-light);
+            font-size: 1.1rem;
+        }
+
+        /* ── MODAL ───────────────────────────────────────── */
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            z-index: 500;
+            background: rgba(30, 18, 10, 0.72);
+            backdrop-filter: blur(3px);
+            justify-content: center;
+            align-items: flex-start;
+            padding: 1.5rem 1rem;
+            overflow-y: auto;
+        }
+
+        .modal-overlay.open {
+            display: flex;
+        }
+
+        .modal {
+            background: var(--cream);
+            max-width: 680px;
+            width: 100%;
+            margin: auto;
+            position: relative;
+            border: 1px solid var(--parchment-deep);
+            border-top: 5px solid var(--rust);
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+            animation: modalIn 0.28s ease both;
+            padding: 2.2rem 2rem 2.5rem;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 1rem;
+            right: 1.2rem;
+            background: none;
+            border: none;
+            font-size: 1.6rem;
+            color: var(--walnut-light);
+            cursor: pointer;
+            line-height: 1;
+            transition: color 0.15s, transform 0.15s;
+        }
+
+        .modal-close:hover {
+            color: var(--rust);
+            transform: rotate(90deg);
+        }
+
+        .modal-category {
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            color: var(--amber);
+            margin-bottom: 0.4rem;
+        }
+
+        .modal-title {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(1.6rem, 4vw, 2.1rem);
+            font-weight: 700;
+            color: var(--rust);
+            line-height: 1.2;
+            margin-bottom: 0.3rem;
+        }
+
+        .modal-divider {
+            width: 100%;
+            margin: 1rem 0;
+            border: none;
+            border-top: 1px solid var(--parchment-deep);
+            position: relative;
+        }
+
+        .modal-divider::before {
+            content: '✦';
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            background: var(--cream);
+            padding: 0 0.5rem;
+            color: var(--amber);
+            font-size: 0.75rem;
+        }
+
+        .modal-section-title {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            font-weight: 600;
+            font-style: italic;
+            color: var(--walnut);
+            margin-bottom: 0.75rem;
+        }
+
+        .ingredients-list {
+            list-style: none;
+            margin-bottom: 1.5rem;
+        }
+
+        .ingredients-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.6rem;
+            padding: 0.35rem 0;
+            border-bottom: 1px dotted var(--parchment-deep);
+            font-size: 0.9rem;
+            line-height: 1.4;
+            cursor: pointer;
+            transition: color 0.15s;
+        }
+
+        .ingredients-list li:last-child {
+            border-bottom: none;
+        }
+
+        .ingredients-list li.checked {
+            text-decoration: line-through;
+            color: var(--walnut-light);
+            opacity: 0.55;
+        }
+
+        .ing-check {
+            width: 14px;
+            height: 14px;
+            border: 1.5px solid var(--amber);
+            border-radius: 1px;
+            flex-shrink: 0;
+            margin-top: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.65rem;
+            color: var(--rust);
+            background: var(--cream);
+            transition: background 0.15s, border-color 0.15s;
+        }
+
+        .ingredients-list li.checked .ing-check {
+            background: var(--rust);
+            border-color: var(--rust);
+            color: white;
+        }
+
+        .recipe-instructions {
+            font-size: 0.93rem;
+            line-height: 1.8;
+            color: var(--walnut);
+            white-space: pre-line;
+        }
+
+        .modal-fav {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1.5rem;
+            padding-top: 1rem;
+            border-top: 1px dashed var(--parchment-deep);
+            background: none;
+            border-left: none;
+            border-right: none;
+            border-bottom: none;
+            cursor: pointer;
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.8rem;
+            letter-spacing: 0.1em;
+            color: var(--walnut-light);
+            transition: color 0.15s;
+        }
+
+        .modal-fav:hover,
+        .modal-fav.active {
+            color: var(--rust);
+        }
+
+        .modal-fav .heart {
+            font-size: 1.1rem;
+        }
+
+        /* ── FOOTER ─────────────────────────────────────── */
+        footer {
+            text-align: center;
+            padding: 1.5rem 1rem;
+            background: var(--rust);
+            color: rgba(253, 246, 236, 0.5);
+            font-family: 'IM Fell English SC', serif;
+            font-size: 0.72rem;
+            letter-spacing: 0.14em;
+            border-top: 3px solid var(--amber);
+        }
+
+        /* ── ANIMATIONS ──────────────────────────────────── */
+        @keyframes fadeDown {
+            from {
+                opacity: 0;
+                transform: translateY(-12px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes cardIn {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes modalIn {
+            from {
+                opacity: 0;
+                transform: scale(0.96) translateY(8px);
+            }
+
+            to {
+                opacity: 1;
+                transform: scale(1) translateY(0);
+            }
+        }
+
+        /* ── RESPONSIVE ──────────────────────────────────── */
+        @media (max-width: 480px) {
+            .recipe-grid {
+                grid-template-columns: 1fr 1fr;
+                gap: 0.9rem;
+            }
+
+            .recipe-card {
+                padding: 1rem 0.9rem 0.9rem;
+            }
+
+            .card-title {
+                font-size: 1rem;
+            }
+
+            .modal {
+                padding: 1.5rem 1.2rem 2rem;
+            }
+
+            .controls {
+                padding: 0.7rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 340px) {
+            .recipe-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media print {
+
+            .controls,
+            .modal-overlay,
+            footer,
+            .fav-btn {
+                display: none !important;
+            }
+
+            .recipe-card {
+                break-inside: avoid;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header>
+        <!-- Ornamental crest SVG -->
+        <svg class="header-ornament" width="120" height="52" viewBox="0 0 120 52" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <g opacity="0.9">
+                <!-- Wreath left -->
+                <path d="M10 26 Q5 18 14 14 Q10 22 18 22 Q12 28 18 32 Q10 30 10 26Z" fill="#c8842a" opacity="0.7" />
+                <path d="M8 26 Q2 20 8 14 Q7 22 15 20 Q9 27 14 33 Q6 31 8 26Z" fill="#c8842a" opacity="0.5" />
+                <path d="M14 32 Q8 36 12 42 Q16 34 22 36 Q16 40 18 46 Q12 42 14 32Z" fill="#c8842a" opacity="0.6" />
+                <!-- Wreath right -->
+                <path d="M110 26 Q115 18 106 14 Q110 22 102 22 Q108 28 102 32 Q110 30 110 26Z" fill="#c8842a"
+                    opacity="0.7" />
+                <path d="M112 26 Q118 20 112 14 Q113 22 105 20 Q111 27 106 33 Q114 31 112 26Z" fill="#c8842a"
+                    opacity="0.5" />
+                <path d="M106 32 Q112 36 108 42 Q104 34 98 36 Q104 40 102 46 Q108 42 106 32Z" fill="#c8842a"
+                    opacity="0.6" />
+                <!-- Center diamond -->
+                <rect x="56" y="20" width="8" height="8" rx="0.5" transform="rotate(45 60 24)" fill="#c8842a"
+                    opacity="0.85" />
+                <!-- Horizontal bars -->
+                <line x1="24" y1="26" x2="48" y2="26" stroke="#c8842a" stroke-width="1" opacity="0.6" />
+                <line x1="72" y1="26" x2="96" y2="26" stroke="#c8842a" stroke-width="1" opacity="0.6" />
+                <line x1="28" y1="22" x2="48" y2="22" stroke="#c8842a" stroke-width="0.5" opacity="0.4" />
+                <line x1="72" y1="22" x2="92" y2="22" stroke="#c8842a" stroke-width="0.5" opacity="0.4" />
+            </g>
+        </svg>
+
+        <h1 class="site-title">Her Recipe Box</h1>
+        <p class="site-subtitle">A treasury of beloved family recipes</p>
+
+        <!-- Decorative divider -->
+        <svg class="header-divider" width="280" height="14" viewBox="0 0 280 14" fill="none"
+            xmlns="http://www.w3.org/2000/svg">
+            <line x1="0" y1="7" x2="118" y2="7" stroke="#c8842a" stroke-width="0.8" opacity="0.5" />
+            <path d="M128 7 L132 3 L136 7 L132 11Z" fill="#c8842a" opacity="0.7" />
+            <circle cx="140" cy="7" r="2.5" fill="#c8842a" opacity="0.9" />
+            <path d="M144 7 L148 3 L152 7 L148 11Z" fill="#c8842a" opacity="0.7" />
+            <line x1="162" y1="7" x2="280" y2="7" stroke="#c8842a" stroke-width="0.8" opacity="0.5" />
+        </svg>
+    </header>
+
+    <!-- CONTROLS -->
+    <div class="controls">
+        <div class="search-wrap">
+            <span class="search-icon">⚘</span>
+            <input type="search" id="search" placeholder="Search recipes or ingredients…" autocomplete="off" />
+        </div>
+        <div class="filters" id="filters">
+            <button class="filter-btn active" data-cat="All">All Recipes</button>
+            <button class="filter-btn" data-cat="Mains">🥩 Mains</button>
+            <button class="filter-btn" data-cat="Sides">🥗 Sides</button>
+            <button class="filter-btn" data-cat="Baked Goods">🍞 Baked Goods</button>
+            <button class="filter-btn" data-cat="Desserts">🍮 Desserts</button>
+            <button class="filter-btn" data-cat="Breakfast">🥞 Breakfast</button>
+            <button class="filter-btn" data-cat="Favourites">♡ Favourites</button>
+        </div>
+    </div>
+
+    <!-- GRID -->
+    <main class="grid-section">
+        <p class="section-heading" id="result-count"></p>
+        <div class="recipe-grid" id="recipe-grid"></div>
+    </main>
+
+    <!-- MODAL -->
+    <div class="modal-overlay" id="modal-overlay" role="dialog" aria-modal="true">
+        <div class="modal" id="modal">
+            <button class="modal-close" id="modal-close" aria-label="Close">✕</button>
+            <p class="modal-category" id="modal-cat"></p>
+            <h2 class="modal-title" id="modal-title"></h2>
+            <hr class="modal-divider" />
+            <p class="modal-section-title">Ingredients</p>
+            <ul class="ingredients-list" id="modal-ingredients"></ul>
+            <hr class="modal-divider" />
+            <p class="modal-section-title">Method</p>
+            <p class="recipe-instructions" id="modal-recipe"></p>
+            <button class="modal-fav" id="modal-fav">
+                <span class="heart">♡</span>
+                <span class="fav-label">Save to Favourites</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer>
+        <svg width="160" height="10" viewBox="0 0 160 10" fill="none" xmlns="http://www.w3.org/2000/svg"
+            style="display:block;margin:0 auto 0.5rem">
+            <line x1="0" y1="5" x2="68" y2="5" stroke="#c8842a" stroke-width="0.7" opacity="0.4" />
+            <circle cx="80" cy="5" r="2" fill="#c8842a" opacity="0.5" />
+            <line x1="92" y1="5" x2="160" y2="5" stroke="#c8842a" stroke-width="0.7" opacity="0.4" />
+        </svg>
+        Made with love &nbsp;✦&nbsp; Her Recipe Box
+    </footer>
+
+    <script>
+        const RECIPES = [
+            { title: "Beef Stroganoff", category: "Mains", ingredients: ["1 lb. beef (strips or cubes)", "1 can Cream of Mushroom soup", "1/2 cup sour cream", "1 small can sliced mushrooms", "Egg noodles"], recipe: "Brown the beef in a skillet. Stir in the mushroom soup and drained mushrooms. Simmer on low heat for 10–15 minutes until meat is tender. Just before serving, stir in the sour cream. Serve over hot cooked egg noodles." },
+            { title: "Classic Potato Salad", category: "Sides", ingredients: ["4-5 large potatoes (boiled/peeled/cubed)", "3 hard-boiled eggs (chopped)", "1/2 cup mayo", "1 tbsp mustard", "1/4 cup diced celery", "Salt & pepper"], recipe: "Mix mayo, mustard, salt, and pepper in a large bowl. Fold in the potatoes, eggs, and celery. Chill for at least 2 hours before serving." },
+            { title: "Oven-Baked Chicken", category: "Mains", ingredients: ["Chicken pieces (thighs/legs)", "1 cup breadcrumbs", "1/2 cup grated Parmesan", "1 tsp garlic powder", "Melted butter"], recipe: "Dip chicken in melted butter, then coat in the breadcrumb/cheese mixture. Bake at 375°F for 45–50 minutes until golden and juices run clear." },
+            { title: "A-1 Meatloaf", category: "Mains", ingredients: ["1½ lbs ground beef", "¾ cup cracker crumbs", "1 egg (beaten)", "½ cup milk", "2 tbsp A-1 sauce", "1 tsp salt", "¼ tsp pepper"], recipe: "Combine all ingredients in a large bowl. Shape into a loaf in a shallow baking pan. Bake at 350°F for 1 hour. Let stand 10 minutes before slicing." },
+            { title: "Tuna Noodle Casserole", category: "Mains", ingredients: ["1 can tuna (drained)", "1 can Cream of Celery soup", "½ cup milk", "2 cups cooked egg noodles", "1 cup frozen peas (optional)", "Crushed potato chips for topping"], recipe: "Combine tuna, soup, milk, noodles, and peas. Pour into a greased casserole dish. Top with crushed potato chips. Bake at 375°F for 20–25 minutes until bubbly." },
+            { title: "Chili Con Carne", category: "Mains", ingredients: ["1 lb ground beef", "1 medium onion (chopped)", "1 can (15 oz) kidney beans", "1 can (15 oz) tomato sauce", "1-2 tbsp chili powder", "Salt to taste"], recipe: "Brown beef and onion; drain fat. Add beans, tomato sauce, and spices. Cover and simmer for 30 minutes to blend flavors." },
+            { title: "Snickerdoodles", category: "Baked Goods", ingredients: ["1 cup shortening (or butter)", "1½ cups sugar", "2 eggs", "2¾ cups flour", "2 tsp cream of tartar", "1 tsp baking soda", "½ tsp salt", "Topping: 2 tbsp sugar + 2 tsp cinnamon"], recipe: "Cream shortening and sugar. Add eggs. Mix in dry ingredients. Roll into 1-inch balls. Roll balls in cinnamon-sugar mixture. Bake on ungreased sheet at 400°F for 8–10 minutes." },
+            { title: "Baked Beans", category: "Sides", ingredients: ["2 cans (16 oz) pork and beans", "¼ cup brown sugar", "1 tsp mustard", "2 tbsp ketchup", "2-3 slices bacon (cut up)"], recipe: "Mix beans, sugar, mustard, and ketchup in a baking dish. Top with bacon pieces. Bake at 325°F for 1 hour until thickened." },
+            { title: "Classic Macaroni and Cheese", category: "Sides", ingredients: ["8 oz macaroni (cooked/drained)", "2 cups shredded cheddar cheese", "2 tbsp butter", "2 tbsp flour", "2 cups milk", "1/2 tsp salt", "1/4 tsp pepper"], recipe: "Melt butter in a pan, stir in flour, salt, and pepper. Gradually add milk, stirring until thickened. Add 1.5 cups of cheese until melted. Mix with macaroni. Pour into dish, top with remaining cheese. Bake at 350°F for 20 minutes." },
+            { title: "Slow Cooker Pot Roast", category: "Mains", ingredients: ["3-4 lb chuck roast", "1 packet onion soup mix", "1 cup water", "4 carrots (chopped)", "4 potatoes (cubed)", "1 onion (sliced)"], recipe: "Place vegetables in slow cooker. Top with roast. Combine soup mix and water; pour over meat. Cover and cook on Low for 8-10 hours or High for 5-6 hours." },
+            { title: "Old Fashioned Pancakes", category: "Breakfast", ingredients: ["1½ cups flour", "3½ tsp baking powder", "1 tsp salt", "1 tbsp sugar", "1¼ cups milk", "1 egg", "3 tbsp melted butter"], recipe: "Sift dry ingredients together. Make a well and add milk, egg, and butter. Mix until smooth. Pour onto a hot griddle and cook until golden on both sides." },
+            { title: "Peanut Butter Cookies", category: "Baked Goods", ingredients: ["1 cup peanut butter", "1 cup sugar", "1 egg", "1 tsp vanilla extract"], recipe: "Mix all ingredients until smooth. Roll into 1-inch balls. Place on baking sheet and flatten with a fork in a crisscross pattern. Bake at 350°F for 10-12 minutes." },
+            { title: "Banana Bread", category: "Baked Goods", ingredients: ["3 ripe bananas (mashed)", "1/3 cup melted butter", "3/4 cup sugar", "1 egg (beaten)", "1 tsp vanilla", "1 tsp baking soda", "Pinch of salt", "1½ cups flour"], recipe: "Mix butter into mashed bananas. Add sugar, egg, vanilla, salt, and soda. Mix in flour. Pour into greased loaf pan. Bake at 350°F for 1 hour." },
+            { title: "Porcupine Meatballs", category: "Mains", ingredients: ["1 lb ground beef", "1/2 cup uncooked long-grain rice", "1/2 cup water", "1/3 cup chopped onion", "1 tsp salt", "1/2 tsp celery salt", "1/8 tsp garlic powder", "1/8 tsp pepper", "1 can (15 oz) tomato sauce", "1 cup water", "2 tsp Worcestershire sauce"], recipe: "Mix beef, rice, ½ cup water, onion, and seasonings. Shape into 1½-inch balls. In a large skillet, mix tomato sauce, 1 cup water, and Worcestershire sauce. Bring to a boil. Add meatballs. Cover and simmer for 45 minutes until rice is tender." },
+            { title: "Stuffed Peppers", category: "Mains", ingredients: ["6 green peppers", "1 lb ground beef", "1/4 cup chopped onion", "Salt & pepper", "1 can (15 oz) tomato sauce", "2 cups cooked rice"], recipe: "Cut tops off peppers and remove seeds. Cook peppers in boiling water for 5 mins; drain. Brown beef and onion. Add rice, salt, pepper, and half the tomato sauce. Stuff peppers. Stand peppers in a baking dish. Pour remaining sauce over them. Bake at 350°F for 45 minutes." },
+            { title: "Swedish Meatballs", category: "Mains", ingredients: ["1 lb ground beef", "1/2 cup breadcrumbs", "1 egg", "1/4 cup milk", "1/4 cup chopped onion", "1/2 tsp allspice", "1/4 tsp nutmeg", "1 can beef gravy"], recipe: "Combine all ingredients except gravy. Shape into small balls and brown in a skillet. Drain fat. Pour beef gravy over meatballs. Cover and simmer for 15-20 minutes. Serve over noodles or mashed potatoes." },
+            { title: "Cornbread", category: "Baked Goods", ingredients: ["1 cup flour", "1 cup cornmeal", "1/4 cup sugar", "4 tsp baking powder", "1/2 tsp salt", "1 cup milk", "1 egg", "1/4 cup melted shortening or oil"], recipe: "Combine dry ingredients. Stir in milk, egg, and shortening. Beat until smooth. Pour into greased 8x8 pan. Bake at 425°F for 20-25 minutes." },
+            { title: "American Goulash", category: "Mains", ingredients: ["1 lb ground beef", "1 onion (chopped)", "2 cans (15 oz) tomato sauce", "2 cups elbow macaroni (uncooked)", "1 tsp garlic salt", "1 tbsp Italian seasoning"], recipe: "Brown beef and onion. Stir in tomato sauce and seasonings. Add 2 cups water and the dry macaroni. Bring to a boil, then reduce heat and simmer covered for 20 minutes until macaroni is tender." },
+            { title: "Baked Ziti", category: "Mains", ingredients: ["1 lb ziti pasta", "1 jar marinara sauce", "1 lb ricotta cheese", "1 lb shredded mozzarella", "1/4 cup grated Parmesan"], recipe: "Cook ziti and drain. Mix pasta with sauce and ricotta. Layer half in a baking dish, top with half the mozzarella. Add remaining pasta and remaining cheeses. Bake at 375°F for 30 minutes until bubbly." },
+            { title: "Shepherd's Pie", category: "Mains", ingredients: ["1 lb ground beef", "1 onion (chopped)", "1 can (15 oz) mixed vegetables (drained)", "1 can beef gravy", "3 cups mashed potatoes"], recipe: "Brown beef and onion. Stir in vegetables and gravy. Pour into a casserole dish. Spread mashed potatoes over the top. Bake at 400°F for 20 minutes until potatoes are golden." },
+            { title: "Apple Crisp", category: "Desserts", ingredients: ["4-6 cups sliced apples", "1 cup brown sugar", "3/4 cup oats", "3/4 cup flour", "1 tsp cinnamon", "1/2 cup softened butter"], recipe: "Place apples in a greased baking dish. Mix remaining ingredients until crumbly and sprinkle over apples. Bake at 375°F for 30-35 minutes until apples are tender." }
+        ];
+
+        // ── STATE ──────────────────────────────────────────
+        let activeCategory = 'All';
+        let searchQuery = '';
+        let favourites = JSON.parse(localStorage.getItem('hrb_favs') || '[]');
+        let openRecipeIndex = null;
+
+        // ── HELPERS ────────────────────────────────────────
+        function saveFavs() { localStorage.setItem('hrb_favs', JSON.stringify(favourites)); }
+        function isFav(title) { return favourites.includes(title); }
+
+        function toggleFav(title) {
+            if (isFav(title)) { favourites = favourites.filter(t => t !== title); }
+            else { favourites.push(title); }
+            saveFavs();
+        }
+
+        // ── FILTER & RENDER ───────────────────────────────
+        function getFiltered() {
+            return RECIPES.filter((r, i) => {
+                const catMatch = activeCategory === 'All'
+                    || (activeCategory === 'Favourites' && isFav(r.title))
+                    || r.category === activeCategory;
+                const q = searchQuery.toLowerCase();
+                const textMatch = !q
+                    || r.title.toLowerCase().includes(q)
+                    || r.ingredients.some(ing => ing.toLowerCase().includes(q));
+                return catMatch && textMatch;
+            }).map((r, _, arr) => ({ ...r, idx: RECIPES.indexOf(r) }));
+        }
+
+        function render() {
+            const filtered = getFiltered();
+            const grid = document.getElementById('recipe-grid');
+            const count = document.getElementById('result-count');
+            count.textContent = filtered.length === RECIPES.length
+                ? `${RECIPES.length} recipes`
+                : `${filtered.length} of ${RECIPES.length} recipes`;
+
+            if (!filtered.length) {
+                grid.innerHTML = '<p class="no-results">No recipes found — try a different search or category.</p>';
+                return;
+            }
+
+            grid.innerHTML = filtered.map(r => `
+    <article class="recipe-card" data-idx="${r.idx}" role="button" tabindex="0" aria-label="Open ${r.title}">
+      <p class="card-category">${r.category}</p>
+      <h2 class="card-title">${r.title}</h2>
+      <p class="card-preview">${r.recipe}</p>
+      <div class="card-footer">
+        <span class="card-ingredient-count">${r.ingredients.length} ingredients</span>
+        <button class="fav-btn ${isFav(r.title) ? 'active' : ''}" data-title="${r.title}" aria-label="${isFav(r.title) ? 'Remove from favourites' : 'Add to favourites'}">
+          ${isFav(r.title) ? '♥' : '♡'}
+        </button>
+      </div>
+    </article>
+  `).join('');
+
+            // Stagger card animations
+            grid.querySelectorAll('.recipe-card').forEach((card, i) => {
+                card.style.animationDelay = `${i * 0.045}s`;
+            });
+        }
+
+        // ── MODAL ─────────────────────────────────────────
+        function openModal(idx) {
+            openRecipeIndex = idx;
+            const r = RECIPES[idx];
+            document.getElementById('modal-cat').textContent = r.category;
+            document.getElementById('modal-title').textContent = r.title;
+            document.getElementById('modal-recipe').textContent = r.recipe;
+
+            const ul = document.getElementById('modal-ingredients');
+            ul.innerHTML = r.ingredients.map(ing => `
+    <li>
+      <span class="ing-check"></span>
+      <span>${ing}</span>
+    </li>
+  `).join('');
+
+            updateModalFav();
+
+            document.getElementById('modal-overlay').classList.add('open');
+            document.body.style.overflow = 'hidden';
+
+            // Ingredient checkbox toggle
+            ul.querySelectorAll('li').forEach(li => {
+                li.addEventListener('click', () => {
+                    li.classList.toggle('checked');
+                    li.querySelector('.ing-check').textContent = li.classList.contains('checked') ? '✓' : '';
+                });
+            });
+        }
+
+        function closeModal() {
+            document.getElementById('modal-overlay').classList.remove('open');
+            document.body.style.overflow = '';
+            openRecipeIndex = null;
+        }
+
+        function updateModalFav() {
+            if (openRecipeIndex === null) return;
+            const r = RECIPES[openRecipeIndex];
+            const btn = document.getElementById('modal-fav');
+            const fav = isFav(r.title);
+            btn.classList.toggle('active', fav);
+            btn.querySelector('.heart').textContent = fav ? '♥' : '♡';
+            btn.querySelector('.fav-label').textContent = fav ? 'Saved to Favourites' : 'Save to Favourites';
+        }
+
+        // ── EVENT LISTENERS ───────────────────────────────
+
+        // Filter buttons
+        document.getElementById('filters').addEventListener('click', e => {
+            const btn = e.target.closest('.filter-btn');
+            if (!btn) return;
+            document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            activeCategory = btn.dataset.cat;
+            render();
+        });
+
+        // Search
+        document.getElementById('search').addEventListener('input', e => {
+            searchQuery = e.target.value;
+            render();
+        });
+
+        // Card clicks (open modal or toggle fav)
+        document.getElementById('recipe-grid').addEventListener('click', e => {
+            const favBtn = e.target.closest('.fav-btn');
+            if (favBtn) {
+                e.stopPropagation();
+                toggleFav(favBtn.dataset.title);
+                favBtn.classList.toggle('active');
+                favBtn.textContent = isFav(favBtn.dataset.title) ? '♥' : '♡';
+                return;
+            }
+            const card = e.target.closest('.recipe-card');
+            if (card) openModal(parseInt(card.dataset.idx));
+        });
+
+        // Keyboard on cards
+        document.getElementById('recipe-grid').addEventListener('keydown', e => {
+            if (e.key === 'Enter' || e.key === ' ') {
+                const card = e.target.closest('.recipe-card');
+                if (card) openModal(parseInt(card.dataset.idx));
+            }
+        });
+
+        // Modal fav button
+        document.getElementById('modal-fav').addEventListener('click', () => {
+            if (openRecipeIndex === null) return;
+            toggleFav(RECIPES[openRecipeIndex].title);
+            updateModalFav();
+            render(); // update card heart
+        });
+
+        // Close modal
+        document.getElementById('modal-close').addEventListener('click', closeModal);
+        document.getElementById('modal-overlay').addEventListener('click', e => {
+            if (e.target === document.getElementById('modal-overlay')) closeModal();
+        });
+        document.addEventListener('keydown', e => {
+            if (e.key === 'Escape') closeModal();
+        });
+
+        // ── INIT ──────────────────────────────────────────
+        render();
+    </script>
+</body>
+
+</html>

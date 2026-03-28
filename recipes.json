@@ -1,0 +1,263 @@
+[
+    {
+        "title": "Beef Stroganoff",
+        "ingredients": [
+            "1 lb. beef (strips or cubes)",
+            "1 can Cream of Mushroom soup",
+            "1/2 cup sour cream",
+            "1 small can sliced mushrooms",
+            "Egg noodles"
+        ],
+        "recipe": "Brown the beef in a skillet. Stir in the mushroom soup and drained mushrooms. Simmer on low heat for 10–15 minutes until meat is tender. Just before serving, stir in the sour cream. Serve over hot cooked egg noodles."
+    },
+    {
+        "title": "Classic Potato Salad",
+        "ingredients": [
+            "4-5 large potatoes (boiled/peeled/cubed)",
+            "3 hard-boiled eggs (chopped)",
+            "1/2 cup mayo",
+            "1 tbsp mustard",
+            "1/4 cup diced celery",
+            "Salt & pepper"
+        ],
+        "recipe": "Mix mayo, mustard, salt, and pepper in a large bowl. Fold in the potatoes, eggs, and celery. Chill for at least 2 hours before serving."
+    },
+    {
+        "title": "Oven-Baked Chicken",
+        "ingredients": [
+            "Chicken pieces (thighs/legs)",
+            "1 cup breadcrumbs",
+            "1/2 cup grated Parmesan",
+            "1 tsp garlic powder",
+            "Melted butter"
+        ],
+        "recipe": "Dip chicken in melted butter, then coat in the breadcrumb/cheese mixture. Bake at 375°F for 45–50 minutes until golden and juices run clear."
+    },
+    {
+        "title": "A-1 Meatloaf",
+        "ingredients": [
+            "1 ½ lbs ground beef",
+            "¾ cup cracker crumbs",
+            "1 egg (beaten)",
+            "½ cup milk",
+            "2 tbsp A-1 sauce",
+            "1 tsp salt",
+            "¼ tsp pepper"
+        ],
+        "recipe": "Combine all ingredients in a large bowl. Shape into a loaf in a shallow baking pan. Bake at 350°F for 1 hour. Let stand 10 minutes before slicing."
+    },
+    {
+        "title": "Tuna Noodle Casserole",
+        "ingredients": [
+            "1 can tuna (drained)",
+            "1 can Cream of Celery soup",
+            "½ cup milk",
+            "2 cups cooked egg noodles",
+            "1 cup frozen peas (optional)",
+            "Crushed potato chips for topping"
+        ],
+        "recipe": "Combine tuna, soup, milk, noodles, and peas. Pour into a greased casserole dish. Top with crushed potato chips. Bake at 375°F for 20–25 minutes until bubbly."
+    },
+    {
+        "title": "Chili Con Carne",
+        "ingredients": [
+            "1 lb ground beef",
+            "1 medium onion (chopped)",
+            "1 can (15 oz) kidney beans",
+            "1 can (15 oz) tomato sauce",
+            "1-2 tbsp chili powder",
+            "Salt to taste"
+        ],
+        "recipe": "Brown beef and onion; drain fat. Add beans, tomato sauce, and spices. Cover and simmer for 30 minutes to blend flavors."
+    },
+    {
+        "title": "Snickerdoodles",
+        "ingredients": [
+            "1 cup shortening (or butter)",
+            "1 ½ cups sugar",
+            "2 eggs",
+            "2 ¾ cups flour",
+            "2 tsp cream of tartar",
+            "1 tsp baking soda",
+            "½ tsp salt",
+            "Topping: 2 tbsp sugar + 2 tsp cinnamon"
+        ],
+        "recipe": "Cream shortening and sugar. Add eggs. Mix in dry ingredients. Roll into 1-inch balls. Roll balls in cinnamon-sugar mixture. Bake on ungreased sheet at 400°F for 8–10 minutes."
+    },
+    {
+        "title": "Baked Beans",
+        "ingredients": [
+            "2 cans (16 oz) pork and beans",
+            "¼ cup brown sugar",
+            "1 tsp mustard",
+            "2 tbsp ketchup",
+            "2-3 slices bacon (cut up)"
+        ],
+        "recipe": "Mix beans, sugar, mustard, and ketchup in a baking dish. Top with bacon pieces. Bake at 325°F for 1 hour until thickened."
+    },
+    {
+        "title": "Classic Macaroni and Cheese",
+        "ingredients": [
+            "8 oz macaroni (cooked/drained)",
+            "2 cups shredded cheddar cheese",
+            "2 tbsp butter",
+            "2 tbsp flour",
+            "2 cups milk",
+            "1/2 tsp salt",
+            "1/4 tsp pepper"
+        ],
+        "recipe": "Melt butter in a pan, stir in flour, salt, and pepper. Gradually add milk, stirring until thickened. Add 1.5 cups of cheese until melted. Mix with macaroni. Pour into dish, top with remaining cheese. Bake at 350°F for 20 minutes."
+    },
+    {
+        "title": "Slow Cooker Pot Roast",
+        "ingredients": [
+            "3-4 lb chuck roast",
+            "1 packet onion soup mix",
+            "1 cup water",
+            "4 carrots (chopped)",
+            "4 potatoes (cubed)",
+            "1 onion (sliced)"
+        ],
+        "recipe": "Place vegetables in slow cooker. Top with roast. Combine soup mix and water; pour over meat. Cover and cook on Low for 8-10 hours or High for 5-6 hours."
+    },
+    {
+        "title": "Old Fashioned Pancakes",
+        "ingredients": [
+            "1 1/2 cups flour",
+            "3 1/2 tsp baking powder",
+            "1 tsp salt",
+            "1 tbsp sugar",
+            "1 1/4 cups milk",
+            "1 egg",
+            "3 tbsp melted butter"
+        ],
+        "recipe": "Sift dry ingredients together. Make a well and add milk, egg, and butter. Mix until smooth. Pour onto a hot griddle and cook until golden on both sides."
+    },
+    {
+        "title": "Peanut Butter Cookies",
+        "ingredients": [
+            "1 cup peanut butter",
+            "1 cup sugar",
+            "1 egg",
+            "1 tsp vanilla extract"
+        ],
+        "recipe": "Mix all ingredients until smooth. Roll into 1-inch balls. Place on baking sheet and flatten with a fork in a crisscross pattern. Bake at 350°F for 10-12 minutes."
+    },
+    {
+        "title": "Banana Bread",
+        "ingredients": [
+            "3 ripe bananas (mashed)",
+            "1/3 cup melted butter",
+            "3/4 cup sugar",
+            "1 egg (beaten)",
+            "1 tsp vanilla",
+            "1 tsp baking soda",
+            "Pinch of salt",
+            "1 1/2 cups flour"
+        ],
+        "recipe": "Mix butter into mashed bananas. Add sugar, egg, vanilla, salt, and soda. Mix in flour. Pour into greased loaf pan. Bake at 350°F for 1 hour."
+    },
+    {
+        "title": "Porcupine Meatballs",
+        "ingredients": [
+            "1 lb ground beef",
+            "1/2 cup uncooked long-grain rice",
+            "1/2 cup water",
+            "1/3 cup chopped onion",
+            "1 tsp salt",
+            "1/2 tsp celery salt",
+            "1/8 tsp garlic powder",
+            "1/8 tsp pepper",
+            "1 can (15 oz) tomato sauce",
+            "1 cup water",
+            "2 tsp Worcestershire sauce"
+        ],
+        "recipe": "Mix beef, rice, 1/2 cup water, onion, and seasonings. Shape into 1 1/2-inch balls. In a large skillet, mix tomato sauce, 1 cup water, and Worcestershire sauce. Bring to a boil. Add meatballs. Cover and simmer for 45 minutes until rice is tender."
+    },
+    {
+        "title": "Stuffed Peppers",
+        "ingredients": [
+            "6 green peppers",
+            "1 lb ground beef",
+            "1/4 cup chopped onion",
+            "Salt & pepper",
+            "1 can (15 oz) tomato sauce",
+            "2 cups cooked rice"
+        ],
+        "recipe": "Cut tops off peppers and remove seeds. Cook peppers in boiling water for 5 mins; drain. Brown beef and onion. Add rice, salt, pepper, and half the tomato sauce. Stuff peppers. Stand peppers in a baking dish. Pour remaining sauce over them. Bake at 350°F for 45 minutes."
+    },
+    {
+        "title": "Swedish Meatballs",
+        "ingredients": [
+            "1 lb ground beef",
+            "1/2 cup breadcrumbs",
+            "1 egg",
+            "1/4 cup milk",
+            "1/4 cup chopped onion",
+            "1/2 tsp allspice",
+            "1/4 tsp nutmeg",
+            "1 can beef gravy"
+        ],
+        "recipe": "Combine all ingredients except gravy. Shape into small balls and brown in a skillet. Drain fat. Pour beef gravy over meatballs. Cover and simmer for 15-20 minutes. Serve over noodles or mashed potatoes."
+    },
+    {
+        "title": "Cornbread",
+        "ingredients": [
+            "1 cup flour",
+            "1 cup cornmeal",
+            "1/4 cup sugar",
+            "4 tsp baking powder",
+            "1/2 tsp salt",
+            "1 cup milk",
+            "1 egg",
+            "1/4 cup melted shortening or oil"
+        ],
+        "recipe": "Combine dry ingredients. Stir in milk, egg, and shortening. Beat until smooth. Pour into greased 8x8 pan. Bake at 425°F for 20-25 minutes."
+    },
+    {
+        "title": "American Goulash",
+        "ingredients": [
+            "1 lb ground beef",
+            "1 onion (chopped)",
+            "2 cans (15 oz) tomato sauce",
+            "2 cups elbow macaroni (uncooked)",
+            "1 tsp garlic salt",
+            "1 tbsp Italian seasoning"
+        ],
+        "recipe": "Brown beef and onion. Stir in tomato sauce and seasonings. Add 2 cups water and the dry macaroni. Bring to a boil, then reduce heat and simmer covered for 20 minutes until macaroni is tender."
+    },
+    {
+        "title": "Baked Ziti",
+        "ingredients": [
+            "1 lb ziti pasta",
+            "1 jar marinara sauce",
+            "1 lb ricotta cheese",
+            "1 lb shredded mozzarella",
+            "1/4 cup grated Parmesan"
+        ],
+        "recipe": "Cook ziti and drain. Mix pasta with sauce and ricotta. Layer half in a baking dish, top with half the mozzarella. Add remaining pasta and remaining cheeses. Bake at 375°F for 30 minutes until bubbly."
+    },
+    {
+        "title": "Shepherd's Pie",
+        "ingredients": [
+            "1 lb ground beef",
+            "1 onion (chopped)",
+            "1 can (15 oz) mixed vegetables (drained)",
+            "1 can beef gravy",
+            "3 cups mashed potatoes"
+        ],
+        "recipe": "Brown beef and onion. Stir in vegetables and gravy. Pour into a casserole dish. Spread mashed potatoes over the top. Bake at 400°F for 20 minutes until potatoes are golden."
+    },
+    {
+        "title": "Apple Crisp",
+        "ingredients": [
+            "4-6 cups sliced apples",
+            "1 cup brown sugar",
+            "3/4 cup oats",
+            "3/4 cup flour",
+            "1 tsp cinnamon",
+            "1/2 cup softened butter"
+        ],
+        "recipe": "Place apples in a greased baking dish. Mix remaining ingredients until crumbly and sprinkle over apples. Bake at 375°F for 30-35 minutes until apples are tender."
+    }
+]
